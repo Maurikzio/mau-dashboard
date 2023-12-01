@@ -12,6 +12,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   // 1.- Capture the user's input
   const handleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
+    params.set("page", "1"); // To reset the page when user types a new search query
     if (term) {
       params.set("query", term);
     } else {
