@@ -1,6 +1,17 @@
 import "@/app/ui/global.css"
 import { inter } from "@/app/ui/fonts";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Acme Dashboard',
+    default: "Acme Dashboard",
+  },
+  description: "The officlal Acme Dashboard site",
+  metadataBase: new URL('https://mau-dashboard.vercel.app/')
+}
+
 export default function RootLayout({
   children,
 }: {
